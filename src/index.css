@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+:root {
+	--highlight-color: #255AB2;
+
+	/* background color */
+	--primary-bg: #121314;
+	--secondary-bg: #111111;
+	--tertiary-bg: #252627;
+
+	--primary-text: #D6D6D6;
+	--secondary-text: #999999;
+	--tertiary-text: #F8F4F9;
+
+	--primary-border: #29292980;
+}
+
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	src: url('./assets/font/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+	font-weight: 100 800;
+	font-stretch: 75% 100%;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans';
+	src: url('./assets/font/IBM_Plex_Sans/IBMPlexSans-Italic-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+	font-weight: 100 800;
+	font-stretch: 75% 100%;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* _____________________________________________________________________________________________________________________________________ */
+
+/* Regular */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Medium */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Semi Bold Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* Bold */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* Black Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+/* Heavy Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYHEAVYITALIC.OTF') format('opentype');
+	font-weight: 800;
+	font-style: italic;
+}
+
+/* Light Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+/* Thin Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+	font-weight: 100;
+	font-style: italic;
+}
+
+/* Ultra Light Italic */
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('./assets/font/sf-pro-display/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('opentype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+
+/* _____________________________________________________________________________________________________________________________________ */
+
+
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	/* Force absolute framework height */
+	max-height: 100vh;
+	width: 100vw;
+	max-width: 100vw;
+	overflow: hidden;
+	/* THE APP CANNOT SCROLL THE WHOLE VIEWPORT */
+	font-family: 'SF Pro Display';
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* Cleaned up the broken syntax comments above this */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+#root {
+	isolation: isolate;
+}
+
+/* Hide scrollbars cleanly across the entire app */
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+/* _____________________________________________________________________________________________________________________________________ */
+
+
+
+
+.border-radius-design {
+	border-radius: 52% 48% 78% 22% / 78% 55% 45% 22%;
+
+}
