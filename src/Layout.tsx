@@ -3,6 +3,7 @@ import RequestSecsion from "@/sections/RequestSecsion";
 import CodeIDE from "@/sections/CodeIDE";
 import CommitSection from "@/sections/CommitSection";
 import PreviewWebsiteSection from "./sections/PreviewWebsiteSection";
+import InstallationSection from "./sections/InstallationSection";
 
 import { useState } from "react";
 
@@ -13,14 +14,25 @@ const Layout = () => {
 		setIsPreview(!isPreview);
 	};
 
+	const [isInstallation, setIsInstallation] = useState(true);
+
+	const toggleInstallation = () => {
+		setIsInstallation(!isInstallation);
+	};
+
 	return (
 		<div
-			className={`h-screen w-screen xl:bg-zinc-950 text-white grid p-1 gap-1
+			className={`h-screen w-screen xl:bg-zinc-950 text-white grid p-0 gap-1
 							xl:grid-rows-[1fr_1fr_1fr_1fr_64px]
 						${isPreview ? `xl:grid-cols-[1.5fr_0.5fr_1fr]` : `xl:grid-cols-[1.5fr_0.5fr_64px]`}
 
 						`}
 		>
+			{isInstallation === true ? (
+				<div className="w-full h-ful absolute z-50">
+					<InstallationSection />
+				</div>
+			) : null}
 			<div className=" xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 flex flex-row justify-start items-start gap-2 min-h-0 min-w-0">
 				<RequestSecsion />
 			</div>

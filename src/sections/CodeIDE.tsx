@@ -89,7 +89,7 @@ const CodeIDE = ({ isPreview }: { isPreview?: boolean }) => {
 			rules: [],
 			colors: {
 				"editor.background": "#111111",
-				"editor.selectionBackground": "#255AB2",
+				// "editor.selectionBackground": "#255AB2",
 				"editor.lineHighlightBorder": "#00000000",
 			},
 		});
@@ -184,6 +184,9 @@ const CodeIDE = ({ isPreview }: { isPreview?: boolean }) => {
 								readOnly: false,
 								automaticLayout: true,
 								minimap: { enabled: false },
+								dragAndDrop: true,
+								snippetSuggestions: "none",
+								emptySelectionClipboard: true,
 							}}
 						/>
 					</div>

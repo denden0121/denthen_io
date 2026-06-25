@@ -1,0 +1,55 @@
+[
+	{
+		"title": "Create Room",
+		"description": "Generate your secure session network.",
+		"explanation": [
+			"Enter your preferred username",
+			"Click Next to generate your unique room ID and secure authorization keys on our backend."
+		],
+		"button": "Next"
+	},
+	{
+		"title": "Install VS Code Extension [ denthen_IO ]",
+		"description": "Get the official companion utility.",
+		"explanation": [
+			"First Click the button [SpecialKey] to Copy the SpecialKey.",
+			"Then Open VS Code, search for [ denthen_IO ] in the Extensions Marketplace, and click Install",
+			"After Installation open a file any [html, css, js]",
+			"Press ctrl + shift + p: This will open a modal at the top of the vscode",
+			"Paste the SpecialKey then Press Enter",
+			"Go back to denthenIO website for the next step"
+		],
+		"button": "Next"
+	},
+	{
+		"title": "Test Connection",
+		"description": "Perform network handshake.",
+		"explanation": [
+			"After Installation open any file [html, css, js]",
+			"Press ctrl + shift + p: This will open a modal at the top of the vscode",
+			"Paste your generated SpecialKey into the VS Code extension prompt and hit enter.",
+			"Note: This icon bellow will turn green if the connection is successful"
+		],
+		"button": "Next"
+	},
+	{
+		"title": "Try Import Code",
+		"description": "Stream your first local file.",
+		"explanation": [
+			"Open any code file in VS Code",
+			"Press ctrl + window + d [this will export all the code].",
+			"To export a snippet or specific code. First you need to highlight the code, then press crtl + window + s",
+			"Click next if export is successful"
+		],
+		"button": "Next"
+	},
+	{
+		"title": "Connection Successful",
+		"description": "Workspace live.",
+		"explanation": [
+			"Your pipeline is fully operational.",
+			"Copy the Room Code to invite your friends to collaborate."
+		],
+		"button": "Completed"
+	}
+]
