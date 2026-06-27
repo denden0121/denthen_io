@@ -1,11 +1,13 @@
-import Dashboard from "./Dashboard";
+// import Dashboard from "./Dashboard";
 import Layout from "./Layout";
+import ChatBox from "./test/chatbox";
 
 function App() {
 	return (
 		<>
 			{/* <Dashboard /> */}
-			<Layout />
+			{/* <Layout /> */}
+			<ChatBox />
 		</>
 	);
 }

@@ -1,20 +1,60 @@
 @import "tailwindcss";
 
+
+@keyframes shake-input {
+
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-6px);
+	}
+
+	75% {
+		transform: translateX(6px);
+	}
+}
+
+@keyframes ping-shadow {
+	0% {
+		box-shadow: 0 0 0 0px rgb(10, 52, 145);
+	}
+
+	100% {
+		box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+	}
+}
+
+.shake-on-error {
+	animation: shake-input 0.2s ease-in-out 0s 2;
+}
+
+.ping-shadow-on-complete {
+	animation: ping-shadow 3s cubic-bezier(0, 0, 0.2, 1) 0s infinite;
+}
+
 :root {
 	--highlight-color: #255AB2;
+	/* --highlight-color: #0d2861; */
 
 	/* background color */
 	--primary-bg: #121314;
 	--secondary-bg: #111111;
-	--tertiary-bg: #252627;
+	/* --tertiary-bg: #252627; */
+	--tertiary-bg: #29292980;
+	--tertiary-bg: #292929be;
 
 	--primary-text: #D6D6D6;
 	--secondary-text: #999999;
 	--tertiary-text: #F8F4F9;
+	--disabled-text: #7c7c7c;
 
 	--primary-border: #29292980;
+	--primary-border: #2929294b;
+	--primary-component: #101011;
 }
-
 
 @font-face {
 	font-family: 'IBM Plex Sans';

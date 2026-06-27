@@ -4,28 +4,28 @@
 		"description": "Generate your secure session network.",
 		"explanation": [
 			"Enter your preferred username",
-			"Click Next to generate your unique room ID and secure authorization keys on our backend."
+			"Press Enter to generate your unique room ID and secure authorization keys on our backend."
 		],
 		"button": "Next"
 	},
 	{
-		"title": "Install VS Code Extension [ denthen_IO ]",
+		"title": "Install VS Code Extension \" denthen_IO \"",
 		"description": "Get the official companion utility.",
 		"explanation": [
-			"First Click the button [SpecialKey] to Copy the SpecialKey.",
-			"Then Open VS Code, search for [ denthen_IO ] in the Extensions Marketplace, and click Install",
-			"After Installation open a file any [html, css, js]",
+			"First Click the [SpecialKey] to Copy the SpecialKey.",
+			"Then Open VS Code, search for \" denthen_IO \" in the Extensions Marketplace, and click Install",
+			"After Installation open any file \"html, css, js\"",
 			"Press ctrl + shift + p: This will open a modal at the top of the vscode",
-			"Paste the SpecialKey then Press Enter",
-			"Go back to denthenIO website for the next step"
+			"Paste your generated SpecialKey into the VS Code extension prompt and hit enter.",
+			"Note: If the connection is successful it'll automatically jump to next step"
 		],
 		"button": "Next"
 	},
 	{
-		"title": "Test Connection",
+		"title": "VS Code Connection",
 		"description": "Perform network handshake.",
 		"explanation": [
-			"After Installation open any file [html, css, js]",
+			"After Installation open any file \"html, css, js\"",
 			"Press ctrl + shift + p: This will open a modal at the top of the vscode",
 			"Paste your generated SpecialKey into the VS Code extension prompt and hit enter.",
 			"Note: This icon bellow will turn green if the connection is successful"
@@ -36,8 +36,8 @@
 		"title": "Try Import Code",
 		"description": "Stream your first local file.",
 		"explanation": [
-			"Open any code file in VS Code",
-			"Press ctrl + window + d [this will export all the code].",
+			"Open any code file in VS Code \"make sure there's a code inside\"",
+			"Press ctrl + window + d \"this will export the code documenent\"",
 			"To export a snippet or specific code. First you need to highlight the code, then press crtl + window + s",
 			"Click next if export is successful"
 		],

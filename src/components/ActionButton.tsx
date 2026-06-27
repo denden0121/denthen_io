@@ -9,7 +9,8 @@ interface ActionButtonProps {
 	notifCount?: number;
 	notifBg?: string;
 	notifText?: string;
-	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
+	// onClick?: () => Promise<void>;
 	isActive?: boolean;
 }
 const ActionButton = ({
@@ -27,7 +28,7 @@ const ActionButton = ({
 	return (
 		<div className="relative inline-block">
 			<button
-				className={`border-(--primary-border) shadow-sm text-xs text-(--primary-text) flex flex-row justify-center items-center gap-2 px-2.5 py-1 rounded-sm cursor-pointer hover:bg-(--tertiary-bg) hover:duration-150 hover:transition-all
+				className={`border-(--primary-border) shadow-sm text-xs text-(--primary-text) flex flex-row justify-center items-center gap-2 px-2.5 py-1  cursor-pointer hover:bg-(--tertiary-bg) hover:duration-150 hover:transition-all
 					
 					${isActive ? `bg-(--tertiary-bg)` : ``}
 					

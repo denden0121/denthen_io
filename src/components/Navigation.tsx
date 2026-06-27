@@ -7,8 +7,10 @@ import {
 	Share2,
 	Command,
 } from "lucide-react";
+import { useRoomState } from "@/store/room.store";
 
 const Navigation = () => {
+	const { roomCode } = useRoomState();
 	return (
 		<>
 			<nav className="w-full h-full  bg-(--secondary-bg) border border-(--primary-border) flex flex-row justify-between items-center px-6 text-(--tertiary-text)">
@@ -50,8 +52,10 @@ const Navigation = () => {
 				</ul>
 
 				<div className="flex flex-row justify-end items-center w-1/5">
-					<p className="flex flex-row justify-center items-center gap-1.5">
-						<Users strokeWidth={2} size={16} color="white" /> room: pxy-3f2-aqa
+					<p
+						className={`flex flex-row justify-center items-center gap-1.5 ${roomCode !== "not connected" ? "text-green-800" : "text-(--primary-text)"} cursor-pointer`}
+					>
+						<Users strokeWidth={2} size={16} /> room: {roomCode}
 					</p>
 				</div>
 			</nav>

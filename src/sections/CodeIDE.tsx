@@ -1,14 +1,22 @@
 import Editor, { loader } from "@monaco-editor/react";
 import ActionButton from "@/components/ActionButton";
-import { FileCodeCorner, Palette, FileBracesCorner } from "lucide-react";
+import {
+	FileCodeCorner,
+	Palette,
+	FileBracesCorner,
+	CloudUpload,
+} from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ReminderComponent from "@/components/ReminderComponent";
 import RequestForm from "@/components/RequestForm";
-
 import { io, Socket } from "socket.io-client";
+
+import { useHoverCommit } from "@/store/hovered.store";
 
 // 1. Accept isPreview as a prop from your main Layout component
 const CodeIDE = ({ isPreview }: { isPreview?: boolean }) => {
+	const isCommitHover = useHoverCommit();
+
 	const [fileActive, setFileActive] = useState(`Html`);
 	const [code, setCode] = useState(``);
 	const [monacoCode, setMonacoCode] = useState(``);
@@ -139,7 +147,7 @@ const CodeIDE = ({ isPreview }: { isPreview?: boolean }) => {
 
 	return (
 		<div className="max-h-full max-w-full h-full w-full min-h-0 flex flex-col justify-start items-start gap-2 min-w-0">
-			<p className="text-sm text-(--secondary-text) px-2">Code IDE</p>
+			{/* <p className="text-sm text-(--secondary-text) px-2">Code IDE</p> */}
 
 			{/* 3. Added overflow-hidden to prevent layout busting during grid transition */}
 			<div className="w-full h-full min-w-0 min-h-0 overflow-hidden border border-(--primary-border) bg-(--primary-border) grid grid-rows-[38px_1fr] gap-[1px]">
@@ -171,8 +179,18 @@ const CodeIDE = ({ isPreview }: { isPreview?: boolean }) => {
 
 				{isLogged ? (
 					/* 4. Wrapped Editor in a clean layout cell that limits growth boundaries */
-					<div className="w-full h-full min-h-0 min-w-0 overflow-hidden">
+					<div
+						className={`w-full relative h-full min-h-0 min-w-0 overflow-hidden border border-hidden transition-all duration-300`}
+					>
+						<span
+							className={`left-1/2  animate-bounce top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-(--primary-text) transition-all ease-in duration-200 flex flex-col justify-center items-center gap-6 w-fit h-fit absolute ${isCommitHover ? "z-50 opacity-100" : "-z-10 opacity-0"}`}
+						>
+							<CloudUpload size={32} strokeWidth={1} />
+							<p className="text-base font-extralight">Drag&Drop codes here</p>
+						</span>
+
 						<Editor
+							className={`transition-all duration-200 ease-in-out ${isCommitHover ? "opacity-60 " : "opacity-100"}`}
 							height="100%"
 							width="100%"
 							theme="newTheme"
